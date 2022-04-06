@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>div{
+    color: red;
+}
+    </style>
+<body>
+    <img src="#">
+    <button id="btn" ></button>
+
+    <script>
+        
+  const img = document.querySelector('img');
+  
+  btn.addEventListener('click',_=> {
+
+    fetch('https://api.giphy.com/v1/gifs/translate?api_key=JHl3WwknSQuiMcV5sQYjYS4EFnyhcuHr&s=cats', {
+  mode: 'cors'
+}) .then(function(response) {
+      return response.json();
+    }).then(function(response) {
+        btn=document.getElementById('btn');
+      
+       
+    img.src = response.data.images.original.url;
+
+    });
+  }
+        )
+      
+    </script>
+</body>
+</html>
